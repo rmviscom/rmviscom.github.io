@@ -1,5 +1,5 @@
 body {
-  padding-top: 10px;
+  padding-top: 60px;
   background: #051F2E;
 }
 
@@ -11,7 +11,7 @@ body {
 hr {
   display:block;
   clear:both;
-  margin-top:40px;
+  margin-top:60px;
   margin-bottom:10px;
   border:1px solid #f5f5f5;
 }
