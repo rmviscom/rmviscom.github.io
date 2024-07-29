@@ -1,7 +1,7 @@
 /* EXAMPLE CODE */
 $(function() {
   $("#year-slider .slider").noUiSlider({
-    start: 8,
+    start: 5,
     step: 1,
     connect: "lower",
     range: {
