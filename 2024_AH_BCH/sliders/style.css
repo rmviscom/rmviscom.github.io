@@ -5,9 +5,10 @@ body {
 
 .well {
   width: 75vw;
-  height: 200px;
   margin: auto;
 }
+
+h2 {font-size:1.5em;}
 
 .eleven-columns li {
   width: calc(100% / 10);
