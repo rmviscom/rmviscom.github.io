@@ -8,7 +8,16 @@ body {
   margin: auto;
 }
 
-h2 {font-size:1.5em;}
+hr {
+  display:block;
+  clear:both;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+h2 {
+  font-size:1.5em;
+}
 
 .eleven-columns li {
   width: calc(100% / 10);
@@ -19,7 +28,10 @@ h2 {font-size:1.5em;}
  * You don't need to change these rules to apply your design.
  */
 .no-ui-slider {
-  width: 100%;
+  width: 80%;
+  float:right;
+  display:inline-block;
+  margin-bottom:20px;
 }
 
 .no-ui-slider .slider-labels {
