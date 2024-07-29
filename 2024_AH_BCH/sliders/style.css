@@ -47,6 +47,7 @@ h2 {
   width: 100%;
   text-align: left;
   font-size: 13px;
+  display:none;
 }
 
 .no-ui-slider .slider-labels li {
