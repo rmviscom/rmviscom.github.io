@@ -22,11 +22,12 @@ $(function() {
   $('#year-slider .slider').on('slide', function(){
     highlightLabel($(this).val());
   });
-  
+  /*
   $("#year-slider .slider-labels").on("click", "li", function() { 
     $('#year-slider .slider').val($(this).index());
     highlightLabel($(this).index());
   });
+  */
   
   function highlightLabel($this) {
     $('#year-slider .slider-labels li').removeClass('active');
