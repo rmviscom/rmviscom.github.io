@@ -63,7 +63,7 @@ h2 {
 }
 
 .no-ui-slider .slider-labels li:hover {
-  color: #333333;
+/*  color: #333333; */
 }
 
 .no-ui-slider .slider-labels li.active {
