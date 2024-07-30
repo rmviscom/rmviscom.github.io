@@ -342,7 +342,13 @@ input[id=radio-3]:checked ~ .glider {
 }
 
 
+
+
+//***************************************************//
 //********** SMARTFAB RESOURCE TOGGLES **************//
+//***************************************************//
+
+
 .container {
   position: absolute;
   left: 0;
