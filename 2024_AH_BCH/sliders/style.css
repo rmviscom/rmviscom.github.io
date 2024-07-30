@@ -263,7 +263,7 @@ h2 {
 //***************************************************//
 
 
-.toggle-container {
+div.toggle-container {
   position: absolute;
   left: 0;
   top: 0;
