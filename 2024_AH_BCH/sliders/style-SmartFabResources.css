@@ -89,14 +89,17 @@ input[id=radio-3]:checked + label {
 
 input[id=radio-1]:checked ~ .glider {
   transform: translateX(0);
+  background-color:#00aa51;
 }
 
 input[id=radio-2]:checked ~ .glider {
   transform: translateX(100%);
+  background-color:#eee;
 }
 
 input[id=radio-3]:checked ~ .glider {
   transform: translateX(200%);
+  background-color:#d6eefc;
 }
 
 .glider {
