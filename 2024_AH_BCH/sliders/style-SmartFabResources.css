@@ -136,9 +136,19 @@ input.investigate:checked ~ .glider {
 .hidden {
   visibility:none;
 }
-
+.reset-button {
+  position: relative;
+  background-color: #fff;
+  /* box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15); */
+  padding: 0.25rem;
+  border-radius: 99px;
+  color:#666;
+  margin:0 auto;
+}
+/*
 @media (max-width: 700px) {
   .tabs {
     transform: scale(0.6);
   }
+  */
 }
