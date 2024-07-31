@@ -29,8 +29,10 @@ display: flex; */
 }
 
 .resource {
-  display:block;
-  clear:both;
+opacity:.8;
+}
+.resource:active {
+  opacity:1;
 }
 
 h2 {
