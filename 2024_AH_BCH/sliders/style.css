@@ -259,8 +259,8 @@ h2 {
 }
 
 li.baseline {
-  border-left: solid 2px #ccc;
-  margin-top: -28px;
+  border-left: dotted 2px #ccc;
+  margin-top: -32px;
   padding: 10px;
 }
 
