@@ -259,8 +259,8 @@ h2 {
 }
 
 li.baseline {
-  border-left:#143156;
-  margin-top:-30px;
+  border-left:solid 2px #143156;
+  margin-top:-29px;
   padding:10px;
 }
 
