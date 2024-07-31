@@ -57,10 +57,11 @@ h2 {
   width: 100%;
   text-align: left;
   font-size: 13px;
+  z-index:0;
 }
 
 .no-ui-slider .slider-labels li {
-  color: #d3d3d3;
+  color: transparent;
   display: inline;
   float: left;
   cursor: pointer;
@@ -259,8 +260,9 @@ h2 {
 }
 
 li.baseline {
-color:#000;
-background-color:#000;
+  border-left: solid 2px #ccc;
+  margin-top: -28px;
+  padding: 10px;
 }
 
 .reset-button {
