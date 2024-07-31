@@ -259,6 +259,11 @@ h2 {
   cursor: not-allowed;
 }
 
+li.baseline {
+color:#000;
+background-color:#000;
+}
+
 .reset-button {
   position: relative;
   background-color: #eee;
