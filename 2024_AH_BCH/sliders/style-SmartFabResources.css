@@ -29,11 +29,8 @@ display: flex; */
 }
 
 .resource {
-opacity:.8;
 }
-.resource:hover {
-  opacity:1;
-}
+
 
 h2 {
   padding:1.5rem 0 .5rem 1rem;
