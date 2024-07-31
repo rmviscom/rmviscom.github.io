@@ -94,7 +94,7 @@ input[id=radio-1]:checked ~ .glider {
 
 input[id=radio-2]:checked ~ .glider {
   transform: translateX(100%);
-  background-color:#fff;
+  background-color:#f1f2f3;
 }
 
 input[id=radio-3]:checked ~ .glider {
