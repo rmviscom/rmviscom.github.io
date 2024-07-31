@@ -260,7 +260,10 @@ h2 {
 
 li.baseline {
   background-color:#ccc;
-  z-index:-1;
+}
+li.baseline:first-child {
+  background-color:#ccc;
+  border-radius:99px 0 0 99px;
 }
 
 .reset-button {
