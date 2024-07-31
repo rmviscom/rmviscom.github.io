@@ -26,6 +26,11 @@ body {
   justify-content: center;
 }
 
+.resource {
+  display:block;
+  clear:both;
+}
+
 .tabs {
   display: flex;
   position: relative;
