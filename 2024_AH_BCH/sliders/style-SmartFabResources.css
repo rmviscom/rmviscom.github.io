@@ -36,7 +36,9 @@ display: flex; */
 h2 {
   padding:1.5rem 0 .5rem 1rem;
   font-weight:bold;
+  font-size:90%;
 }
+
 h2:has(.tabs > input.no:checked) {
 color:#f1f2f3;
 }
