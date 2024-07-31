@@ -259,15 +259,11 @@ h2 {
 }
 
 li.baseline {
-  background-color:#ccc;
+  border-left:#143156;
+  margin-top:-30px;
+  padding:10px;
 }
-li.baseline:first-child {
-  background-color:#ccc;
-  border-radius:99px 0 0 99px;
-}
-li.baseline:last-child {
-    border-radius:0 99px 99px 0;
-}
+
 
 .reset-button {
   position: relative;
