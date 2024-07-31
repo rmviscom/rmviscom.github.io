@@ -72,11 +72,11 @@ h2 {
 }
 
 .no-ui-slider .slider-labels li:hover {
-/*  color: #333333; */
+/*  color: #143156; */
 }
 
 .no-ui-slider .slider-labels li.active {
-/*  color: #333333; */
+/*  color: #143156; */
 }
 
 .noUi-target,
@@ -181,7 +181,7 @@ h2 {
 }
 
 .noUi-connect {
-  background: #464646;
+  background: #143156;
   box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
   -webkit-transition: background 450ms;
   transition: background 450ms;
@@ -211,9 +211,9 @@ h2 {
 }
 
 .noUi-handle {
-  border: 1px solid #464646;
+  border: 1px solid #143156;
   border-radius: 100%;
-  background: #464646;
+  background: #143156;
   cursor: default;
 }
 
