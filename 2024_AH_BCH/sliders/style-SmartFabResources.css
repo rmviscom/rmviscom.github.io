@@ -26,6 +26,7 @@ display: flex; */
   justify-content: center;
   width:310px;
   margin:2rem;
+  float:left;
 }
 
 .resource {
