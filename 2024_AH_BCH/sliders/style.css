@@ -259,7 +259,7 @@ h2 {
 }
 
 li.baseline {
-  border-left: dotted 2px #333;
+  border-left: solid 2px #143156;
   margin-top: -32px;
   padding: 10px;
 }
