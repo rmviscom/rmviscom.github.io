@@ -86,28 +86,28 @@ input[type=radio]:checked + label > .notification {
   background-color: var(--primary-color);
   color: #fff;
 }
-input[id=radio-1]:checked + label {
+input.yes:checked + label {
   color:#00aa51
 }
-input[id=radio-2]:checked + label {
+input.no:checked + label {
   color:#aaa;
 }
-input[id=radio-3]:checked + label {
+input.investigate:checked + label {
   color: #0099de;
 }
   
 
-input.yes[id=radio-1]:checked ~ .glider {
+input.yes:checked ~ .glider {
   transform: translateX(0);
   background-color:#d9ffea;
 }
 
-input.no[id=radio-2]:checked ~ .glider {
+input.no:checked ~ .glider {
   transform: translateX(100%);
   background-color:#f1f2f3;
 }
 
-input.investigate[id=radio-3]:checked ~ .glider {
+input.investigate:checked ~ .glider {
   transform: translateX(200%);
   background-color:#d6eefc;
 }
