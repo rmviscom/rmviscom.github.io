@@ -39,6 +39,20 @@ $(function() {
 });
 /* END EXAMPLE CODE */
 
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('mySlider');
+    const resetButton = document.getElementById('resetButton');
+    const initialValue = 50;  // Set the initial value of the slider
+
+    // Function to reset the slider value
+    const resetSlider = () => {
+        slider.value = initialValue;
+    };
+
+    // Add click event listener to the reset button
+    resetButton.addEventListener('click', resetSlider);
+});
+
 
 /*
 
@@ -71,3 +85,4 @@ l[m%2].children(),q,g)}));!0===d&&n(["set"]);return this};d.vGet=function(){var 
 b,a)})}function X(a){return this.each(function(){var b=c(this).val(),d=this.destroy(),f=c.extend({},d,a);c(this).noUiSlider(f);d.start===f.start&&c(this).val(b)})}function B(){return this[0][arguments.length?"vSet":"vGet"].apply(this[0],arguments)}var G=c(document),C=c.fn.val,z=window.navigator.pointerEnabled?{start:"pointerdown",move:"pointermove",end:"pointerup"}:window.navigator.msPointerEnabled?{start:"MSPointerDown",move:"MSPointerMove",end:"MSPointerUp"}:{start:"mousedown touchstart",move:"mousemove touchmove",
 end:"mouseup touchend"},f="noUi-target noUi-base noUi-origin noUi-handle noUi-horizontal noUi-vertical noUi-background noUi-connect noUi-ltr noUi-rtl noUi-dragable  noUi-state-drag  noUi-state-tap noUi-active noUi-extended noUi-stacking".split(" ");c.fn.val=function(){var a=arguments,b=c(this[0]);return arguments.length?this.each(function(){(c(this).hasClass(f[0])?B:C).apply(c(this),a)}):(b.hasClass(f[0])?B:C).call(b)};c.noUiSlider={Link:c.Link};c.fn.noUiSlider=function(a,b){return(b?X:W).call(this,
 a)}})(window.jQuery||window.Zepto);
+
