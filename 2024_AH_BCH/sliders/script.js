@@ -39,21 +39,33 @@ $(function() {
 });
 /* END EXAMPLE CODE */
 
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.getElementById('mySlider');
-    const resetButton = document.getElementById('resetButton');
-    const initialValue = 50;  // Set the initial value of the slider
+document.addEventListener('DOMContentLoaded', function () {
+  const sliders = document.querySelectorAll('.no-ui-slider');
+
+  sliders.forEach(function (slider) {
+    const initialValue = slider.getAttribute('data-initial') || 0;
+
+    noUiSlider.create(slider.querySelector('.slider'), {
+      start: [initialValue],
+      range: {
+        'min': 0,
+        'max': 10
+      },
+      step: 1,
+      tooltips: true
+    });
+
+    const resetButton = slider.querySelector('.reset-button');
 
     // Function to reset the slider value
     const resetSlider = () => {
-        slider.value = initialValue;
+      slider.querySelector('.slider').noUiSlider.set(initialValue);
     };
 
     // Add click event listener to the reset button
     resetButton.addEventListener('click', resetSlider);
+  });
 });
-
-
 /*
 
 $.Link (part of noUiSlider) - WTFPL */
