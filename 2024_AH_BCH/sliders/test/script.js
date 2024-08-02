@@ -1,42 +1,51 @@
-/* EXAMPLE CODE */
 $(function() {
-  $("#year-slider .slider").noUiSlider({
-    start: 5,
-    step: 1,
-    connect: "lower",
-    range: {
-      'min': 0,
-      'max': 10
-    },
-    serialization: {
-      format: {
-        decimals: 0
+  // List of IDs to initialize
+  const sliderIds = [
+    '#safety', '#schedule', '#quality', '#cost', '#escalation', 
+    '#tradesonsite', '#earlyengagement', '#localmarket', 
+    '#changeorders', '#programcommonality', '#designdisruption'
+  ];
+  
+  // Function to initialize sliders
+  function initializeSlider(selector) {
+    $(selector + ' .slider').noUiSlider({
+      start: 5,
+      step: 1,
+      connect: 'lower',
+      range: {
+        'min': 0,
+        'max': 10
+      },
+      serialization: {
+        format: {
+          decimals: 0
+        }
       }
-    }
-  });
-  
-  $('#year-slider .slider').on('change', function(){
-		highlightLabel($(this).val());
-	});
-  
-  $('#year-slider .slider').on('slide', function(){
-    highlightLabel($(this).val());
-  });
-  /*
-  $("#year-slider .slider-labels").on("click", "li", function() { 
-    $('#year-slider .slider').val($(this).index());
-    highlightLabel($(this).index());
-  });
-  */
-  
-  function highlightLabel($this) {
-    $('#year-slider .slider-labels li').removeClass('active');
-    var index = parseInt($this) + 1;
-    var selector = '#year-slider .slider-labels li:nth-child(' + index + ')';
-    $(selector).addClass('active');
+    });
+    
+    $(selector + ' .slider').on('change', function() {
+      highlightLabel($(this).val(), selector);
+    });
+
+    $(selector + ' .slider').on('slide', function() {
+      highlightLabel($(this).val(), selector);
+    });
   }
   
+  // Function to highlight label based on slider value
+  function highlightLabel(value, selector) {
+    $(selector + ' .slider-labels li').removeClass('active');
+    var index = parseInt(value) + 1;
+    var labelSelector = selector + ' .slider-labels li:nth-child(' + index + ')';
+    $(labelSelector).addClass('active');
+  }
+  
+  // Initialize all sliders
+  sliderIds.forEach(function(id) {
+    initializeSlider(id);
+  });
 });
+
 /* END EXAMPLE CODE */
 
 document.addEventListener('DOMContentLoaded', function () {
