@@ -1,6 +1,6 @@
 /* EXAMPLE CODE */
 $(function() {
-  $("#year-slider .slider").noUiSlider({
+  $(".year-slider .slider").noUiSlider({
     start: 5,
     step: 1,
     connect: "lower",
@@ -15,24 +15,24 @@ $(function() {
     }
   });
   
-  $('#year-slider .slider').on('change', function(){
+  $('.year-slider .slider').on('change', function(){
 		highlightLabel($(this).val());
 	});
   
-  $('#year-slider .slider').on('slide', function(){
+  $('.year-slider .slider').on('slide', function(){
     highlightLabel($(this).val());
   });
   /*
-  $("#year-slider .slider-labels").on("click", "li", function() { 
-    $('#year-slider .slider').val($(this).index());
+  $(".year-slider .slider-labels").on("click", "li", function() { 
+    $('.year-slider .slider').val($(this).index());
     highlightLabel($(this).index());
   });
   */
   
   function highlightLabel($this) {
-    $('#year-slider .slider-labels li').removeClass('active');
+    $('.year-slider .slider-labels li').removeClass('active');
     var index = parseInt($this) + 1;
-    var selector = '#year-slider .slider-labels li:nth-child(' + index + ')';
+    var selector = '.year-slider .slider-labels li:nth-child(' + index + ')';
     $(selector).addClass('active');
   }
   
