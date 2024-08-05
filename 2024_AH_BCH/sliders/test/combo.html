@@ -14,7 +14,6 @@
     }
     .slider-labels li {
       width: 9%;
-      text-align: center;
     }
     .slider-labels .baseline {
       font-weight: bold;
@@ -40,19 +39,23 @@
   float: left;
   cursor: pointer;
 }
-
+    
 .no-ui-slider .slider-labels li:nth-last-child(1) {
   position: absolute;
   margin-left: -3px;
   width: 25px;
+  right:0;
 }
+    .noUi-touch-area {
+      background-color:#143156;
+    }
     .noUi-handle::after, .noUi-handle::before {
   content: none;
   display: block;
   position: absolute;
   height: 14px;
   width: 1px;
-  background: #143156;
+  background-color: #143156;
   left: 14px;
   top: 6px;
       border-radius:99px;
@@ -128,7 +131,7 @@
         <li>7</li>
         <li>8</li>
         <li>9</li>
-        <li class="baseline">10</li>
+        <li class="baseline"></li>
       </ul>
     </div>
 
