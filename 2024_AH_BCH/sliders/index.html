@@ -1,228 +1,355 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>SmartFab® Sliders</title>
-  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.min.css">
+  <style>
+    .well {
+      background-color:#fff;
+    }
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 0;
+    }
+    .slider-labels li {
+      width: 9%;
+    }
+    .slider-labels .baseline {
+      font-weight: bold;
+    }
+    li.baseline {
+  border-left:solid 12px #7a8b9e;
+  margin-top:-28px;
+  padding:10px;
+      margin-left:-16px;
+}
+    .no-ui-slider .slider-labels {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+  margin-left: -3px;
+  width: 100%;
+  text-align: left;
+  font-size: 9px;
+}
 
+.no-ui-slider .slider-labels li {
+  color: transparent;
+  display: inline;
+  float: left;
+  cursor: pointer;
+  height:28px;
+}
+    .no-ui-slider .slider-labels li:first-child { 
+    margin-left:8px; 
+    }
+    
+.no-ui-slider .slider-labels li:nth-last-child(1) {
+  position: absolute;
+  margin-left: -3px;
+  width: 25px;
+  right:0;
+}
+    .noUi-touch-area {
+      background-color:#143156;
+    }
+    .noUi-handle::after, .noUi-handle::before {
+  content: none;
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background-color: #143156;
+  left: 14px;
+  top: 6px;
+      border-radius:99px;
+    }
+     #safety, #schedule, #quality, #cost, #escalation, 
+    #tradesonsite, #earlyengagement, #localmarket, 
+    #changeorders, #programcommonality, #designdisruption {
+      width:69%;
+      float:right;
+      margin-top:8px;
+    }
+    h2 {
+      font-size:1.25em;
+      width:27%;
+      float:left;
+      text-align:right;
+      margin-top:0;
+    }
+    .reset-button {
+  position: relative;
+  background-color: #eee;
+  /* box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15); */
+  padding: 0.75rem 1.25em;
+  border-radius: 99px;
+  color:#666;
+  margin:0 auto;
+  border:#fff;
+  float:right;
+}
+    hr {
+  display:block;
+  clear:both;
+  margin-top:50px;
+  margin-bottom:10px;
+  border:1px solid transparent;
+}
+  </style>
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="well">
-  <h2>Safety</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="3">
-    <div id="slider" class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li class="baseline">3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-  <hr>
-  <h2>Schedule</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="10">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li class="baseline">10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Quality</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="3">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li class="baseline">3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Cost</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="6">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li class="baseline">6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Escalation Risk</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="8">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li class="baseline">8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Tradespersons Onsite</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="10">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li class="baseline">10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Very Early Engagement/Decisions</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="1">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li class="baseline">1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Local Market Improvement</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="6">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li class="baseline">6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Change Order Dollars</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="3">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li class="baseline">3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Program Commonality</h2>
-  <div id="year-slider" class="no-ui-slider" data-initial="1">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li class="baseline">1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-
-    <hr>
-  <h2>Disruption in Design</h2>
-  <div id="year-slider" class="no-ui-slider">
-    <div class="slider"></div>
-    <ul class="slider-labels eleven-columns">
-      <li>0</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>
-  <hr>
-  <button id="resetButton" class="reset-button">Reset</button>
 
   
-</div> <!-- end well -->
-<!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+<body>
+  <div class="well">
+    <h2>Safety</h2>
+    <div id="safety" class="no-ui-slider" data-initial="3">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li class="baseline">3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
 
+    <hr>
+    <h2>Schedule</h2>
+    <div id="schedule" class="no-ui-slider" data-initial="10">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li class="baseline"></li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Quality</h2>
+    <div id="quality" class="no-ui-slider" data-initial="3">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li class="baseline">3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Cost</h2>
+    <div id="cost" class="no-ui-slider" data-initial="6">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="baseline">6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Escalation Risk</h2>
+    <div id="escalation" class="no-ui-slider" data-initial="8">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li class="baseline">8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Tradespersons Onsite</h2>
+    <div id="tradesonsite" class="no-ui-slider" data-initial="10">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li class="baseline">10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Very Early Engagement/Decisions</h2>
+    <div id="earlyengagement" class="no-ui-slider" data-initial="0">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li class="baseline">0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Local Market Improvement</h2>
+    <div id="localmarket" class="no-ui-slider" data-initial="6">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="baseline">6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Change Order Dollars</h2>
+    <div id="changeorders" class="no-ui-slider" data-initial="3">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li class="baseline">3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Program Commonality</h2>
+    <div id="programcommonality" class="no-ui-slider" data-initial="0">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li class="baseline">0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h2>Disruption in Design</h2>
+    <div id="designdisruption" class="no-ui-slider" data-initial="0">
+      <div class="slider"></div>
+      <ul class="slider-labels eleven-columns">
+        <li class="baseline">0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+    <hr>
+    <button id="resetButton" class="reset-button">Reset</button>
+    <hr>
+  </div> <!-- end well -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Function to create slider
+      function createSlider(sliderElem, initial) {
+        noUiSlider.create(sliderElem, {
+          start: initial,
+          step: 1,
+          range: {
+            'min': 0,
+            'max': 10
+          }
+        });
+      }
+
+      // Initialize sliders
+      $('.no-ui-slider').each(function() {
+        var initial = $(this).data('initial');
+        var sliderElem = this.querySelector('.slider');
+        createSlider(sliderElem, initial);
+      });
+
+      // Reset button functionality
+      $('#resetButton').click(function() {
+        $('.no-ui-slider').each(function() {
+          var initial = $(this).data('initial');
+          var sliderElem = this.querySelector('.slider');
+          sliderElem.noUiSlider.set(initial);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
