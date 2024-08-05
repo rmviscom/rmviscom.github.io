@@ -66,11 +66,12 @@ h2 {
   cursor: pointer;
 }
 
-.no-ui-slider .slider-labels li:nth-last-child(1) {
+/*.no-ui-slider .slider-labels li:nth-last-child(1) {
   position: absolute;
   margin-left: -3px;
   width: 25px;
 }
+*/
 
 .no-ui-slider .slider-labels li:hover {
 /*  color: #143156; */
@@ -110,6 +111,7 @@ h2 {
   z-index: 1;
   cursor: move;
 }
+.noUi-touch-area {
 
 .noUi-stacking .noUi-handle {
   /* This class is applied to the lower origin when
