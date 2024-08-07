@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+:root {
+  --primary-color: #e00700;
+  --secondary-color: #e6eef9;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 48, 87, 0.1);
+}
+
+.container {
+/*    position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+display: flex; */
+  align-items: center;
+  justify-content: center;
+  width:310px;
+  margin:0 2rem;
+  float:left;
+}
+
+.resource {
+}
+
+
+h2 {
+  padding:1.5rem 0 .25rem 1rem;
+  font-weight:bold;
+  font-size:85%;
+}
+
+h2:has(.tabs > input.no:checked) {
+color:#f1f2f3;
+}
+
+.tabs {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(24, 24, 24, 0.15), 0 6px 12px 0 rgba(24, 24, 24, 0.15);
+  padding: 0rem;
+  border-radius: 99px;
+  color:#666;
+  width:300px;
+}
+.tabs * {
+  z-index: 2;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 100px;
+  font-size: .9rem;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+fieldset {
+  display:flex;
+}
+.notification {
+ /* display: flex; */
+  display:none;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  transition: 0.15s ease-in;
+}
+
+input[type=radio]:checked + label {
+  font-weight:bold;
+}
+input[type=radio]:checked + label > .notification {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+input.yes:checked + label {
+  color:#00aa51
+}
+input.no:checked + label {
+  color:#aaa;
+}
+input.investigate:checked + label {
+  color: #0099de;
+}
+  
+
+input.yes:checked ~ .glider {
+  transform: translateX(0);
+  background-color:#d9ffea;
+}
+
+input.no:checked ~ .glider {
+  transform: translateX(100%);
+  background-color:#f1f2f3;
+}
+
+input.investigate:checked ~ .glider {
+  transform: translateX(200%);
+  background-color:#d6eefc;
+}
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 34px;
+  width: 100px;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+.hidden {
+  visibility:none;
+}
+
+/*
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.6);
+  }
+  */
+}
