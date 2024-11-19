@@ -1,0 +1,174 @@
+//FindChangeList.txt
+//A support file for the InDesign JavaScript FindChangeByList.jsx
+//
+//This data file is tab-delimited, with carriage returns separating records.
+//
+//The format of each record in the file is:
+//findType<tab>findProperties<tab>changeProperties<tab>findChangeOptions<tab>description
+//
+//Where:
+//<tab> is a tab character
+//findType is "text", "grep", or "glyph" (this sets the type of find/change operation to use).
+//findProperties is a properties record (as text) of the find preferences.
+//changeProperties is a properties record (as text) of the change preferences.
+//findChangeOptions is a properties record (as text) of the find/change options.
+//description is a description of the find/change operation
+//
+//Very simple example:
+//text	{findWhat:"--"}	{changeTo:"^_"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double dashes and replace with an em dash.
+//
+//More complex example:
+//text	{findWhat:"^9^9.^9^9"}	{appliedCharacterStyle:"price"}	{include footnotes:true, include master pages:true, include hidden layers:true, whole word:false}	Find $10.00 to $99.99 and apply the character style "price".
+//
+//All InDesign search metacharacters are allowed in the "findWhat" and "changeTo" properties for findTextPreferences and changeTextPreferences.
+//
+//If you enter backslashes in the findWhat property of the findGrepPreferences object, they must be "escaped"
+//as shown in the example below:
+//
+//{findWhat:"\\s+"}
+//
+grep	{findWhat:".  +"}	{changeTo:". "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double spaces after a period and replace with single spaces.
+grep	{findWhat:"\r "}	{changeTo:"\r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns followed by a space And replace with single returns.
+grep	{findWhat:" (?=\r)"}	{changeTo:""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns preceded by a space and remove the space.
+grep	{findWhat:"\t\t+"}	{changeTo:"\t"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double tab characters and replace with single tab characters.
+grep	{findWhat:"\r\t"}	{changeTo:"\r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns followed by a tab character and replace with single returns.
+grep	{findWhat:"\t(?=\r)"}	{changeTo:""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns preceded by a tab character and remove the tab character.
+grep	{findWhat:"\r\r+"}	{changeTo:"\r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double returns and replace with single returns.
+text	{findWhat:" - "}	{changeTo:"-"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all space-dash-space and replace with a space.
+text	{findWhat:" ~= "}	{changeTo:"~="}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all space-en dash-space and replace with a space.
+text	{findWhat:"~_"}	{changeTo:" ~_ "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all em dashes and replace with a space-em dash-space.
+text	{findWhat:"--"}	{changeTo:"^_"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all dash-dash and replace with an em dash.
+
+text	{findWhat:"Robins and Morton"}	{changeTo:"Robins & Morton",appliedCharacterStyle:"NoBreak"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace and in company name with ampersand.
+text	{findWhat:"bachelors degree"}	{changeTo:"bachelor's degree"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace bachelors degree with bachelor's degree.
+text	{findWhat:"masters degree"}	{changeTo:"master's degree"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace masters degree with master's degree.
+text	{findWhat:" reno "}	{changeTo:" renovation "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace reno with renovation.
+text	{findWhat:" rehab "}	{changeTo:" rehabilitation "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace rehab with rehabilitation.
+grep	{findWhat:"(?<!Robins) & (?!Morton)"}	{changeTo:" and "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace ampersand NOT in company name with word and.
+grep	{findWhat:"Client"}	{changeTo:"client"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Client with client.
+grep	{findWhat:"Owner"}	{changeTo:"owner",appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Client with client.
+grep	{findWhat:"backwards"}	{changeTo:"backward"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace backwards with backward.
+grep	{findWhat:"forwards"}	{changeTo:"forward"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace forwards with forward.
+grep	{findWhat:"towards"}	{changeTo:"toward"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace towards with forward.
+grep	{findWhat:"break room"}	{changeTo:"breakroom"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace break room with breakroom.
+grep	{findWhat:"Brownfield"}	{changeTo:"brownfield"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Brownfield with brownfield.
+grep	{findWhat:"brown field"}	{changeTo:"brownfield"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace brown field with brownfield.
+grep	{findWhat:"upfit"}	{changeTo:"buildout"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace upfit with buildout.
+grep	{findWhat:"up fit"}	{changeTo:"build out"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace up fit with build out.
+grep	{findWhat:"constructibility"}	{changeTo:"constructability"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace constructibility with constructability.
+grep	{findWhat:"curtainwall"}	{changeTo:"curtain wall"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace curtainwall with curtain wall.
+grep	{findWhat:"(?<=Marketing) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=Safety) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=Accounting) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=Finance) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=Human Resources) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=HR) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=Preconstruction) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=Estimating) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=MEP) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
+grep	{findWhat:"(?<=e.g.) "}	{changeTo:", "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add comma after e.g.
+text	{findWhat:"e-mail"}	{changeTo:"email"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Remove dash from email.
+text	{findWhat:"foot wall"}	{changeTo:"footwall"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace foot wall with footwall.
+text	{findWhat:"Leed"}	{changeTo:"LEED"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace foot wall with footwall.
+text	{findWhat:"LEED Accredited Professional"}	{changeTo:"LEED AP"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace LEED Accredited Professional with LEED AP.
+grep	{findWhat:"(?<!\. )Greenfield"}	{changeTo:"greenfield"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase greenfield when not at the beginning of a sentance.
+text	{findWhat:"head wall"}	{changeTo:"headwall"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace head wall with headwall.
+text	{findWhat:"health-care"}	{changeTo:"healthcare"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace health-care with healthcare.
+text	{findWhat:"health care"}	{changeTo:"healthcare"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace health care with healthcare.
+grep	{findWhat:"(?<=i.e.) "}	{changeTo:", "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add comma after e.g.
+text	{findWhat:"integrated preconstruction"}	{changeTo:"Integrated Preconstruction"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Integrated Preconstruction.
+text	{findWhat:"Integrated preconstruction"}	{changeTo:"Integrated Preconstruction"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Integrated Preconstruction.
+text	{findWhat:"(?<!. )Internet"}	{changeTo:"internet"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase Internet when not at the beginning of a sentence.
+text	{findWhat:"preplan"}	{changeTo:"plan"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Change preplan to plan.
+text	{findWhat:"advanced plan"}	{changeTo:"plan"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Change advanced plan to plan.
+text	{findWhat:"job site"}	{changeTo:"jobsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Change job site to jobsite.
+text	{findWhat:"job-site"}	{changeTo:"jobsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Change job-site to jobsite.
+grep	{findWhat:"(?<!. )Jobsite"}	{changeTo:"jobsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Change job-site to jobsite.
+text	{findWhat:"kick-off"}	{changeTo:"kickoff"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change kick-off to kickoff.
+text	{findWhat:"LEAN"}	{changeTo:"Lean"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Change LEAN to Lean.
+text	{findWhat:"life cycle analysis"}	{changeTo:"life-cycle analysis"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add hyphen to life-cycle analysis.
+text	{findWhat:"mock up"}	{changeTo:"mockup"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change mock up to mockup.
+text	{findWhat:"mock-up"}	{changeTo:"mockup"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change mock-up to mockup.
+text	{findWhat:"Jan."}	{changeTo:"January"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Feb."}	{changeTo:"February"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Mar."}	{changeTo:"March"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Apr."}	{changeTo:"April"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Jun."}	{changeTo:"June"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Jul."}	{changeTo:"July"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Aug."}	{changeTo:"August"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Sept."}	{changeTo:"September"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Oct."}	{changeTo:"October"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Nov."}	{changeTo:"November"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"Dec."}	{changeTo:"December"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Spell out months.
+text	{findWhat:"noncompliance"}	{changeTo:"non-compliance"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add hyphen to noncompliance.
+text	{findWhat:"noncompliant"}	{changeTo:"non-compliant"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add hyphen to noncompliant.
+text	{findWhat:"non-profit"}	{changeTo:"nonprofit"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change non-profit to nonprofit.
+grep	{findWhat:"{(?<=. )\d+"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag digit at beginning of sentence.
+text	{findWhat:"nurse's station"}	{changeTo:"nurses station"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change nurse's station to nurses station.
+text	{findWhat:"nurses' station"}	{changeTo:"nurses station"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change nurses' station to nurses station.
+text	{findWhat:"off site"}	{changeTo:"offsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change off site to offsite.
+text	{findWhat:"off-site"}	{changeTo:"offsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change off-site to offsite.
+text	{findWhat:"on site"}	{changeTo:"onsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change on site to onsite.
+text	{findWhat:"on-site"}	{changeTo:"onsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change on-site to onsite.
+text	{findWhat:"on-site"}	{changeTo:"onsite"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change on-site to onsite.
+grep	{findWhat:"(?<!. )Phase"}	{changeTo:"phase"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change Phase to phase when not at the beginning of a word.
+grep	{findWhat:"\(?(\d\d\d)\)?[-. ‑]?(\d\d\d)[-. ‑]?(\d\d\d\d)"}	{changeTo:"$1‑$2‑$3"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Format phone numbers with dashes.
+text	{findWhat:"pre-cast"}	{changeTo:"precast"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre-cast to precast.
+text	{findWhat:"pre-construction"}	{changeTo:"preconstruction"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre-construction to preconstruction.
+text	{findWhat:"pre construction"}	{changeTo:"preconstruction"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre construction to preconstruction.
+text	{findWhat:"pre-fabrication"}	{changeTo:"prefabrication"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre-fabrication to prefabrication.
+text	{findWhat:"pre fabrication"}	{changeTo:"prefabrication"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre fabrication to prefabrication.
+text	{findWhat:"pre task meeting"}	{changeTo:"pretask meeting"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre task meeting to pretask meeting.
+text	{findWhat:"pre-task meeting"}	{changeTo:"pretask meeting"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre-task meeting to pretask meeting.
+text	{findWhat:"punchlist"}	{changeTo:"punch list"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change punchlist meeting to punch list.
+text	{findWhat:"\"\,"}	{changeTo:"\,\""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Put punctuation inside quotation marks.
+text	{findWhat:"\"\."}	{changeTo:"\.\""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Put punctuation inside quotation marks.
+text	{findWhat:"self perform"}	{changeTo:"self-perform"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Hyphenate self-perform.
+text	{findWhat:"site work"}	{changeTo:"sitework"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change site work to sitework.
+text	{findWhat:"site-work"}	{changeTo:"sitework"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change site-work to sitework.
+grep	{findWhat:"(?<=[\d+])k"}	{changeTo:",000"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change k as in thousands to ,000.
+grep	{findWhat:"(?<=[\d+]) square-foot"}	{changeTo:"-square-foot"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change number-space-square-foot to number-dash-square-foot.
+text	{findWhat:"sq.ft."}	{changeTo:"SF"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change sq.ft. to SF.
+grep	{findWhat:"Building Forward(?!~r)"}	{changeTo:"Building Forward\~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to Building Forward.
+grep	{findWhat:"Building with Purpose"}	{changeTo:"Building With Purpose"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Add trademark to Building With Purpose.
+grep	{findWhat:"Building With Purpose(?!~r)"}	{changeTo:"Building With Purpose~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Correct capitalization for Building With Purpose.
+grep	{findWhat:"JET Power(?!~r)"}	{changeTo:"JET Power~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to JET Power.
+grep	{findWhat:"Pursuit of Safety Excellence(?!~r)"}	{changeTo:"Pursuit of Safety Excellence~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to Pursuit of Safety Excellence.
+grep	{findWhat:"Smartfab"}	{changeTo:"SmartFab"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Correct capitalization for SmartFab.
+grep	{findWhat:"SmartFab(?!~r)"}	{changeTo:"SmartFab~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to SmartFab.
+grep	{findWhat:"True Builder(?!~r)"}	{changeTo:"True Builder~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to True Builder.
+grep	{findWhat:"TrueBuilder"}	{changeTo:"True Builder"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Correct spacing for True Builder.
+grep	{findWhat:"Building Forward~r (?![approach]|[tools])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Building Forward as noun.
+grep	{findWhat:"Building With Purpose~r (?!commitment)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Building With Purpose as noun.
+grep	{findWhat:"JET Power~r (?!innovation)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag JET Power as noun.
+grep	{findWhat:"Pursuit of Safety Excellence~r (?![process]|[endeavors])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Pursuit of Safety Excellence as noun.
+grep	{findWhat:"SmartFab~r (?!approach)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag SmartFab as noun.
+grep	{findWhat:"True Builder~r (?![recruiting message]|[message])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag True Builder as noun.
+grep	{findWhat:"Value Analysis"}	{changeTo:"cost management"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change to cost management.
+grep	{findWhat:"Value Engineering"}	{changeTo:"cost management"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change to cost management.
+grep	{findWhat:"man hours"}	{changeTo:"work hours"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change man hours to work hours.
+grep	{findWhat:"manpower"}	{changeTo:"workforce"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change manpower to workforce.
+grep	{findWhat:"big room"}	{changeTo:"Big Room"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Big Room.
+grep	{findWhat:"colocation"}	{changeTo:"co-location"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Hyphenate co-location.
+grep	{findWhat:"conditions of satisfaction"}	{changeTo:"Conditions of Satisfaction"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Conditions of Satisfaction.
+grep	{findWhat:"(?<!. )Gemba"}	{changeTo:"gemba"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase gemba when not at the beginning of a sentence.
+grep	{findWhat:"Last Planner System(?!~r)"}	{changeTo:"Last Planner System~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to Last Planner System.
+grep	{findWhat:"planning at the source"}	{changeTo:"Planning at the Source"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Planning at the Source
+grep	{findWhat:"(?<=Lean) Coffee"}	{changeTo:" coffee"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase coffee in Lean coffee.
+grep	{findWhat:"(?<=Lean) Assessment"}	{changeTo:" assessment"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase assessment in Lean assessment.
+grep	{findWhat:"(?<=Lean) Labs"}	{changeTo:" labs"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase labs in Lean labs.
+grep	{findWhat:"on-boarding"}	{changeTo:"onboarding"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Remove hyphen from on-boarding.
+grep	{findWhat:"(?<!. )Onboarding"}	{changeTo:"onboarding"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase onboarding inside a sentence.
+grep	{findWhat:"plus delta(?= process)"}	{changeTo:"plus/delta"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add slash to plus/delta process.
+grep	{findWhat:"plus delta(?= app)"}	{changeTo:"PlusDelta app"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Correct spelling of PlusDelta app.
+grep	{findWhat:"(?<!. )Production Tracking"}	{changeTo:"production tracking"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase production tracking.
+grep	{findWhat:"(?<!. )Pull Planning"}	{changeTo:"pull planning"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase pull planning.
+grep	{findWhat:"(?<!. )quality at the source"}	{changeTo:"Quality at the Source"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Quality at the Source.
+grep	{findWhat:"stand up meeting"}	{changeTo:"stand-up meeting"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Hyphenate stand-up meeting.
+grep	{findWhat:"study action team"}	{changeTo:"Study Action Team"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Study Action Team.
+grep	{findWhat:"target value design"}	{changeTo:"target value delivery"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change target value design to target value delivery.
+grep	{findWhat:"target value delivery"}	{changeTo:"Target Value Delivery"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Target Value Delivery.
+grep	{findWhat:"Technology Strategy"}	{changeTo:"technology strategy"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase technology strategy.
+grep	{findWhat:"weekly work plan"}	{changeTo:"Weekly Work Plan"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Weekly Work Plan.
+grep	{findWhat:"indigenous"}	{changeTo:"Indigenous"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Indigenous.
+
