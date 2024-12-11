@@ -45,6 +45,7 @@ text	{findWhat:"masters degree"}	{changeTo:"master's degree"}	{includeFootnotes:
 text	{findWhat:" reno "}	{changeTo:" renovation "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace reno with renovation.
 text	{findWhat:" rehab "}	{changeTo:" rehabilitation "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace rehab with rehabilitation.
 grep	{findWhat:"(?<!Robins) & (?!Morton)"}	{changeTo:" and "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace ampersand NOT in company name with word and.
+
 grep	{findWhat:"Client"}	{changeTo:"client"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Client with client.
 grep	{findWhat:"Owner"}	{changeTo:"owner",appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Client with client.
 grep	{findWhat:"backwards"}	{changeTo:"backward"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace backwards with backward.
@@ -66,7 +67,7 @@ grep	{findWhat:"(?<=HR) Department"}	{changeTo:" department"}	{includeFootnotes:
 grep	{findWhat:"(?<=Preconstruction) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
 grep	{findWhat:"(?<=Estimating) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
 grep	{findWhat:"(?<=MEP) Department"}	{changeTo:" department"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase department after the name.
-grep	{findWhat:"(?<=e.g.) "}	{changeTo:", "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add comma after e.g.
+\\grep	{findWhat:"(?<=e\.g\.) "}	{changeTo:", "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add comma after e.g.
 text	{findWhat:"e-mail"}	{changeTo:"email"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Remove dash from email.
 text	{findWhat:"foot wall"}	{changeTo:"footwall"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace foot wall with footwall.
 text	{findWhat:"Leed"}	{changeTo:"LEED"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace foot wall with footwall.
@@ -75,7 +76,7 @@ grep	{findWhat:"(?<!\. )Greenfield"}	{changeTo:"greenfield"}	{includeFootnotes:t
 text	{findWhat:"head wall"}	{changeTo:"headwall"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace head wall with headwall.
 text	{findWhat:"health-care"}	{changeTo:"healthcare"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace health-care with healthcare.
 text	{findWhat:"health care"}	{changeTo:"healthcare"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace health care with healthcare.
-grep	{findWhat:"(?<=i.e.) "}	{changeTo:", "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add comma after e.g.
+\\grep	{findWhat:"(?<=i\.e\.) "}	{changeTo:", "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add comma after i.e.
 text	{findWhat:"integrated preconstruction"}	{changeTo:"Integrated Preconstruction"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Integrated Preconstruction.
 text	{findWhat:"Integrated preconstruction"}	{changeTo:"Integrated Preconstruction"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Integrated Preconstruction.
 text	{findWhat:"(?<!. )Internet"}	{changeTo:"internet"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase Internet when not at the beginning of a sentence.
@@ -121,8 +122,8 @@ text	{findWhat:"pre fabrication"}	{changeTo:"prefabrication"}	{includeFootnotes:
 text	{findWhat:"pre task meeting"}	{changeTo:"pretask meeting"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre task meeting to pretask meeting.
 text	{findWhat:"pre-task meeting"}	{changeTo:"pretask meeting"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change pre-task meeting to pretask meeting.
 text	{findWhat:"punchlist"}	{changeTo:"punch list"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change punchlist meeting to punch list.
-text	{findWhat:"\"\,"}	{changeTo:"\,\""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Put punctuation inside quotation marks.
-text	{findWhat:"\"\."}	{changeTo:"\.\""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Put punctuation inside quotation marks.
+text	{findWhat:"\"\,"}	{changeTo:"\,\""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Put comma inside quotation marks.
+text	{findWhat:"\"\."}	{changeTo:"\.\""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Put period inside quotation marks.
 text	{findWhat:"self perform"}	{changeTo:"self-perform"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Hyphenate self-perform.
 text	{findWhat:"site work"}	{changeTo:"sitework"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change site work to sitework.
 text	{findWhat:"site-work"}	{changeTo:"sitework"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change site-work to sitework.
@@ -138,12 +139,12 @@ grep	{findWhat:"Smartfab"}	{changeTo:"SmartFab"}	{includeFootnotes:true, include
 grep	{findWhat:"SmartFab(?!~r)"}	{changeTo:"SmartFab~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to SmartFab.
 grep	{findWhat:"True Builder(?!~r)"}	{changeTo:"True Builder~r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Add trademark to True Builder.
 grep	{findWhat:"TrueBuilder"}	{changeTo:"True Builder"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Correct spacing for True Builder.
-grep	{findWhat:"Building Forward~r (?![approach]|[tools])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Building Forward as noun.
-grep	{findWhat:"Building With Purpose~r (?!commitment)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Building With Purpose as noun.
-grep	{findWhat:"JET Power~r (?!innovation)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag JET Power as noun.
-grep	{findWhat:"Pursuit of Safety Excellence~r (?![process]|[endeavors])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Pursuit of Safety Excellence as noun.
-grep	{findWhat:"SmartFab~r (?!approach)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag SmartFab as noun.
-grep	{findWhat:"True Builder~r (?![recruiting message]|[message])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag True Builder as noun.
+//grep	{findWhat:"Building Forward~r (?![approach]|[tools])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Building Forward as noun.
+//grep	{findWhat:"Building With Purpose~r (?!commitment)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Building With Purpose as noun.
+//grep	{findWhat:"JET Power~r (?!innovation)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag JET Power as noun.
+//grep	{findWhat:"Pursuit of Safety Excellence~r (?![process]|[endeavors])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag Pursuit of Safety Excellence as noun.
+//grep	{findWhat:"SmartFab~r (?!approach)"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag SmartFab as noun.
+//grep	{findWhat:"True Builder~r (?![recruiting message]|[message])"}	{changeTo:"", appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Flag True Builder as noun.
 grep	{findWhat:"Value Analysis"}	{changeTo:"cost management"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change to cost management.
 grep	{findWhat:"Value Engineering"}	{changeTo:"cost management"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change to cost management.
 grep	{findWhat:"man hours"}	{changeTo:"work hours"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Change man hours to work hours.
@@ -171,4 +172,3 @@ grep	{findWhat:"target value delivery"}	{changeTo:"Target Value Delivery"}	{incl
 grep	{findWhat:"Technology Strategy"}	{changeTo:"technology strategy"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Lowercase technology strategy.
 grep	{findWhat:"weekly work plan"}	{changeTo:"Weekly Work Plan"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Weekly Work Plan.
 grep	{findWhat:"indigenous"}	{changeTo:"Indigenous"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Capitalize Indigenous.
-
