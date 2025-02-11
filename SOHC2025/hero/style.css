@@ -155,6 +155,8 @@ body {
   --swiper-navigation-size: 20px;
   visibility: hidden;
 }
+@media only screen and (max-width: 600px) {
+  .swiper {
 
 .swiper.swiper-initialized {
   visibility: visible;
