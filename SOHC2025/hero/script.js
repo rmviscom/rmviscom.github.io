@@ -104,7 +104,7 @@ const swiper = new Swiper(".swiper", {
   simulateTouch: false,
 
   autoplay: {
-    delay: 1000
+    delay: 6000
   },
 
   navigation: {
