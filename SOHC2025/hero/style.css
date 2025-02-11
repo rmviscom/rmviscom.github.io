@@ -16,6 +16,12 @@ body {
   padding: 0;
 }
 
+.label {
+  font-size:1em;
+  color:#fff;
+  opacity:0.8;
+}
+
 .hero {
   --border-radius: 12px;
   --transition-duration: 1000ms;
