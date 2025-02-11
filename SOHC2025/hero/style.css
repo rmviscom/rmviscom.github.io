@@ -17,9 +17,11 @@ body {
 }
 
 .label {
-  font-size:1em;
+  font-size:.5em;
   opacity:0.8;
   margin-bottom:30px;
+  display:block;
+  text-transform:uppercase;
 }
 
 .hero {
