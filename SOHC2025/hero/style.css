@@ -246,9 +246,9 @@ body {
 /* Smaller tablets and mobiles */
 @media (max-width: 768px) {
   .content--hero .content__title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight:400;
-  margin: 150px 0 0.2em;
+  margin: 40vh 0 0.2em;
   }
   .swiper-slide-prev, .swiper-slide-active {
   display: none;
@@ -263,7 +263,9 @@ body {
   user-select: none;
   clear:both;
   }
-
+  .content--hero .content__text {
+  width: 100%;
+  }
   .content__desc {
     display:none;
   }
