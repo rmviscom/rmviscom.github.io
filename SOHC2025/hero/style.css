@@ -248,7 +248,7 @@ body {
   .content--hero .content__title {
   font-size: 1.5rem;
   font-weight:400;
-  margin: 0 0 0.2em;
+  margin: 150px 0 0.2em;
   }
   .swiper-slide-prev, .swiper-slide-active {
   display: none;
@@ -267,15 +267,6 @@ body {
   .content__desc {
     display:none;
   }
-
-  .content__text {
-    position:absolute;
-    top:175px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: #fff;
-  }  
 }
   .content--hero .content__text {
   width: 45%;
