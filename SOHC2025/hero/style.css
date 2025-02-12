@@ -228,11 +228,15 @@ body {
   z-index: -1;
 }
 
+.content--hero .content__title {
+  font-size: 2rem;
+  font-weight:400;
+  margin: 0 0 0.2em;
 
 /* Larger screens */
 @media (min-width: 992px) {
 .content--hero .content__title {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight:400;
   margin: 0 0 0.2em;
 }
@@ -241,7 +245,7 @@ body {
 /* Smaller tablets and mobiles */
 @media (max-width: 768px) {
 .content--hero .content__title {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight:400;
   margin: 0 0 0.2em;
 }
