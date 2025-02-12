@@ -264,6 +264,9 @@ body {
   user-select: none;
   clear:both;
 }
+
+  .content__desc {
+    display:none;
   
 }
 
