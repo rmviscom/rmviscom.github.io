@@ -250,6 +250,21 @@ body {
   font-weight:400;
   margin: 0 0 0.2em;
 }
+  .swiper-slide-prev,
+.swiper-slide-active {
+  display: none;
+}
+.hero__swiper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5 / 1;
+  right: 0px;
+  padding: 15px 0;
+  z-index: 1;
+  user-select: none;
+  clear:both;
+}
+  
 }
 
 
