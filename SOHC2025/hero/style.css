@@ -267,9 +267,16 @@ body {
 
   .content__desc {
     display:none;
-  
 }
 
+  .content__text {
+    position:absolute;
+    top:175px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+}
 
 
 
