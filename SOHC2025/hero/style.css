@@ -220,7 +220,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, hsl(49deg 70% 5% / 67%), transparent);
+  background: linear-gradient(90deg, hsl(49deg 70% 5% / 87%), transparent);
   pointer-events: none;
   z-index: -1;
 }
