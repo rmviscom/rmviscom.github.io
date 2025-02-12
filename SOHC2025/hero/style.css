@@ -232,7 +232,7 @@ body {
 /* Larger screens */
 @media (min-width: 992px) {
 .content--hero .content__title {
-  font-size: 10rem;
+  font-size: 5rem;
   font-weight:400;
   margin: 0 0 0.2em;
 }
@@ -241,7 +241,7 @@ body {
 /* Smaller tablets and mobiles */
 @media (max-width: 768px) {
 .content--hero .content__title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight:400;
   margin: 0 0 0.2em;
 }
