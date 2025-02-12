@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  font-size: 16px;
+}
 
 html,
 body {
@@ -145,7 +148,7 @@ body {
   width: 70%;
   aspect-ratio: 2.5 / 1;
   right: 0px;
-  bottom: 125px;
+  top: 50px;
   padding: 15px 0;
   z-index: 1;
   user-select: none;
@@ -225,11 +228,27 @@ body {
   z-index: -1;
 }
 
+
+/* Larger screens */
+@media (min-width: 992px) {
 .content--hero .content__title {
-  font-size: 54px;
+  font-size: 10rem;
   font-weight:400;
   margin: 0 0 0.2em;
 }
+} 
+
+/* Smaller tablets and mobiles */
+@media (max-width: 768px) {
+.content--hero .content__title {
+  font-size: 4rem;
+  font-weight:400;
+  margin: 0 0 0.2em;
+}
+}
+
+
+
 
 .content--hero .content__text {
   width: 45%;
