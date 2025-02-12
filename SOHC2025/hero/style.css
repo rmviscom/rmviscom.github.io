@@ -234,6 +234,10 @@ body {
   margin: 0 0 0.2em;
 }
 
+.content--hero .content__text {
+  width: 45%;
+}
+
 /* Larger screens */
 @media (min-width: 992px) {
   .content--hero .content__title {
@@ -270,9 +274,7 @@ body {
     display:none;
   }
 }
-  .content--hero .content__text {
-  width: 45%;
-  }
+
 .content__image {
   position: absolute;
   top: 0;
