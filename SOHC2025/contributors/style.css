@@ -397,8 +397,8 @@ body {
 }
 .wrapper .module-team .team .team-cards .swiper-container .swiper-slide .card .text .role {
   font-size: 14px;
-  font-weight: 600;
-  color: #CBCBCB;
+  font-weight: 500;
+  color: #b2b2b2;
   letter-spacing: 0.8px;
   margin-top: 5px;
 }
