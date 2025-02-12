@@ -232,6 +232,7 @@ body {
   font-size: 2rem;
   font-weight:400;
   margin: 0 0 0.2em;
+}
 
 /* Larger screens */
 @media (min-width: 992px) {
