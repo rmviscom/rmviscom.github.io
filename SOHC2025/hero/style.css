@@ -206,6 +206,9 @@ body {
 
 .content__desc {
   margin: 0;
+font-family: 'nbinternationalpro', sans-serif;
+    color:blue;
+
 }
 
 .content--slide .content__title {
