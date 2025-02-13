@@ -240,9 +240,7 @@ body {
 }
 
 .content--hero .content__title {
-  font-family: 'nbinternationalpro', sans-serif;
   font-size: 2rem;
-  font-weight:400;
   margin: 0 0 0.2em;
 }
 
@@ -254,10 +252,8 @@ body {
 @media (min-width: 992px) {
   .content--hero .content__title {
   font-size: 3.5rem;
-  font-weight:400;
   margin: 0 0 0.2em;
-  font-family: 'nbinternationalpro', sans-serif;
-
+      color:red;
   }
 } 
 
@@ -265,10 +261,8 @@ body {
 @media (max-width: 768px) {
   .content--hero .content__title {
   font-size: 2.5rem;
-  font-weight:400;
   margin: 40vh 0 0.2em;
-  font-family: 'nbinternationalpro', sans-serif;
-
+      color:yellow;
   }
   .swiper-slide-prev, .swiper-slide-active {
   display: none;
