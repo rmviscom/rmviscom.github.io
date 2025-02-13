@@ -311,7 +311,5 @@ font-family: 'nbinternationalpro', sans-serif;
   .content--hero .content__text {
   width: 100%;
   }
-  .content__desc {
-    display:none;
-  }
+
 }
