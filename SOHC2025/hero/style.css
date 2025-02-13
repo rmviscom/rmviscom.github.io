@@ -216,6 +216,7 @@ font-family: 'nbinternationalpro', sans-serif;
   margin: auto 0 0;
   padding: 0.35em 0.75em;
   background-color: #0007;
+    visibility:hidden;
 }
 
 .content--slide .content__desc {
