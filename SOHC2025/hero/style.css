@@ -285,13 +285,17 @@ font-family: 'nbinternationalpro', sans-serif;
   .swiper-button-next {
   visibility:visible;
   }
+
+  .content--slide .content__title {
+  visibility:visible;
+}
 } 
 
 /* Smaller tablets and mobiles */
 @media (max-width: 768px) {
   .content--hero .content__title {
   font-size: 2.5rem;
-  margin: 40vh 0 0.2em;
+  margin: 35vh 0 0.2em;
   color:white;
   }
 
