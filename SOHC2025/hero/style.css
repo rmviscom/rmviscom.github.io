@@ -280,12 +280,11 @@ font-family: 'nbinternationalpro', sans-serif;
   .content--hero .content__title {
   font-size: 3.5rem;
   margin: 0 0 0.2em;
-color:white;
-visibility:visible;
+  color:white;
   }
-    .swiper-button-next {
+  .swiper-button-next {
   visibility:visible;
-}
+  }
 } 
 
 /* Smaller tablets and mobiles */
