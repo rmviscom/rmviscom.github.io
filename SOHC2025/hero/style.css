@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'nbinternationalpro'; /*a name to be used later*/
+    src: url('https://rmviscom.github.io/fonts/nbinternationalproreg-webfont.ttf'); /*URL to font*/
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +24,7 @@ body {
 
 body {
   background: #222;
-  font-family: 'NB International Pro', sans-serif;
+  font-family: 'nbinternationalpro', sans-serif;
   line-height: 1.35;
   margin: 0;
   padding: 0;
