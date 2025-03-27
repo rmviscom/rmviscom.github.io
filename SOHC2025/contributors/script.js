@@ -106,7 +106,7 @@ window.addEventListener("load", event => {
                             <p class="desc">${desc}</p> 
                         </article>
                         
-                        <div class="social">
+                     <!--   <div class="social">
                         <span class="pointer"></span>
                         <div class="icons">
                             <a class="icon" href="" target="_blank" data-index="10"><img src="${iWebsite}" style="visibility:hidden;"></a>
@@ -115,6 +115,7 @@ window.addEventListener("load", event => {
                             <a class="icon" href="" target="_blank" data-index="11"><img src="${iDribbble}" style="visibility:hidden;"></a>
                             </div>
                             </div>
+                            -->
                     </div>
                 </div>`;
 
