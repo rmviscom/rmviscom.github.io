@@ -4,9 +4,9 @@ window.addEventListener("load", event => {
 
     /* The Team */
     var team = [{
-            name: "Alice Stone",
-            role: "UI Designer",
-            desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+            name: "MOHAMMAD ALAI, AIA, ACHA",
+            role: "Director of Design with the Office of Design and Construction | AdventHealth",
+            desc: "Mohammad Alai is a licensed architect and a Board-Certified Healthcare Architect with more than 40 years of experience in healthcare planning, design, and project management.",
             photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
             website: "https://rafaelalucas.com",
             email: "mailto:rafaelavlucas@gmail.com",
