@@ -6,7 +6,7 @@ window.addEventListener("load", event => {
     var team = [{
             name: "Mohammad Alai",
             role: "AIA, ACHA",
-            desc: "Director of Design with the Office of Design and Construction | AdventHealth",
+            desc: "Director of Design with the Office of Design and Construction<br/>AdventHealth",
             photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
             website: "https://rafaelalucas.com",
             email: "mailto:rafaelavlucas@gmail.com",
@@ -14,9 +14,9 @@ window.addEventListener("load", event => {
             dribbble: "https://dribbble.com/rafaelalucas",
         },
         {
-            name: "Adam Turner",
-            role: "Project Manager",
-            desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+            name: "Sam Burnette",
+            role: "",
+            desc: "Principal | ESa",
             photo: "https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
             website: "https://rafaelalucas.com",
             email: "mailto:rafaelavlucas@gmail.com",
