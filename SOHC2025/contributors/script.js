@@ -110,8 +110,8 @@ window.addEventListener("load", event => {
                         <span class="pointer"></span>
                         <div class="icons">
                             <a class="icon" href="" target="_blank" data-index="10"><img src="${iWebsite}" style="visibility:hidden;"></a>
-                            <a class="icon" href="${email}" target="_blank" data-index="1"><img src="${iEmail} style="visibility:hidden;"></a>
-                            <a class="icon" href="${linkedin}" target="_blank" data-index="2"><img src="${iLinkedin} style="visibility:hidden;"></a>
+                            <a class="icon" href="" target="_blank" data-index="1"><img src="${iEmail} style="visibility:hidden;"></a>
+                            <a class="icon" href="" target="_blank" data-index="2"><img src="${iLinkedin} style="visibility:hidden;"></a>
                             <a class="icon" href="" target="_blank" data-index="11"><img src="${iDribbble}" style="visibility:hidden;"></a>
                             </div>
                             </div>
