@@ -27,14 +27,13 @@
 //
 //{findWhat:"\\s+"}
 //
-grep	{findWhat:".  +"}	{changeTo:". "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double spaces after a period and replace with single spaces.
+text	{findWhat:".  "}	{changeTo:". "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double spaces after a period and replace with single spaces.
 grep	{findWhat:"\r "}	{changeTo:"\r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns followed by a space And replace with single returns.
 grep	{findWhat:" (?=\r)"}	{changeTo:""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns preceded by a space and remove the space.
 grep	{findWhat:"\t\t+"}	{changeTo:"\t"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double tab characters and replace with single tab characters.
 grep	{findWhat:"\r\t"}	{changeTo:"\r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns followed by a tab character and replace with single returns.
 grep	{findWhat:"\t(?=\r)"}	{changeTo:""}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all returns preceded by a tab character and remove the tab character.
-grep	{findWhat:"\r\r+"}	{changeTo:"\r"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all double returns and replace with single returns.
-text	{findWhat:" - "}	{changeTo:"-"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all space-dash-space and replace with a space.
+text	{findWhat:" - "}	{changeTo:" -- "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all space-dash-space and replace with a space.
 text	{findWhat:" ~= "}	{changeTo:"~="}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all space-en dash-space and replace with a space.
 text	{findWhat:"~_"}	{changeTo:" ~_ "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all em dashes and replace with a space-em dash-space.
 text	{findWhat:"--"}	{changeTo:"^_"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Find all dash-dash and replace with an em dash.
@@ -46,8 +45,8 @@ text	{findWhat:" reno "}	{changeTo:" renovation "}	{includeFootnotes:true, inclu
 text	{findWhat:" rehab "}	{changeTo:" rehabilitation "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace rehab with rehabilitation.
 grep	{findWhat:"(?<!Robins) & (?!Morton)"}	{changeTo:" and "}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:false}	Replace ampersand NOT in company name with word and.
 
-grep	{findWhat:"Client"}	{changeTo:"client"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Client with client.
-grep	{findWhat:"Owner"}	{changeTo:"owner",appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Client with client.
+grep	{findWhat:"(?<![\r.!?]\s)(?<!^\s*)\bClient\b"}	{changeTo:"client"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Client with client.
+grep	{findWhat:"(?<![\r.!?]\s)(?<!^\s*)\bOwner\b"}	{changeTo:"owner",appliedCharacterStyle:"FlagQC"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false, caseSensitive:true}	Replace Owner with owner.
 grep	{findWhat:"backwards"}	{changeTo:"backward"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace backwards with backward.
 grep	{findWhat:"forwards"}	{changeTo:"forward"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace forwards with forward.
 grep	{findWhat:"towards"}	{changeTo:"toward"}	{includeFootnotes:true, includeMasterPages:true, includeHiddenLayers:true, wholeWord:false}	Replace towards with forward.
