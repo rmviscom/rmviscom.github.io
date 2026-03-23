@@ -116,7 +116,7 @@ window.addEventListener("load", event => {
         {
             name: "Erik Smithson",
             role: "",
-            desc: "Regional Healthcare Director, Associate Principal<br/><br/>Page",
+            desc: "Senior Project Manager<br/><br/>Robins & Morton",
             photo: "https://www.robinsmorton.com/wp-content/uploads/DSC00008_ErikSmithson_medium.jpg",
             website: "https://robinsmorton.com",
             email: "mailto:builders@robinsmorton.com",
