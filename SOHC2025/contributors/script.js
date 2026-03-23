@@ -14,7 +14,7 @@ window.addEventListener("load", event => {
             dribbble: "https://dribbble.com",
         },
         {
-            name:Penny Houchens",
+            name:"Penny Houchens",
             role: "",
             desc: "Executive Vice President, Healthcare Market<br/><br/>Gresham Smith",
             photo: "https://www.robinsmorton.com/wp-content/uploads/PennyHouchens_headshot-scaled.jpg",
@@ -171,8 +171,8 @@ window.addEventListener("load", event => {
                         <span class="pointer"></span>
                         <div class="icons">
                             <a class="icon" href="" target="_blank" data-index="10"><img src="${iWebsite}" style="visibility:hidden;"></a>
-                            <a class="icon" href="" target="_blank" data-index="1"><img src="${iEmail} style="visibility:hidden;"></a>
-                            <a class="icon" href="" target="_blank" data-index="2"><img src="${iLinkedin} style="visibility:hidden;"></a>
+                            <a class="icon" href="" target="_blank" data-index="1"><img src="${iEmail}" style="visibility:hidden;"></a>
+                            <a class="icon" href="" target="_blank" data-index="2"><img src="${iLinkedin}" style="visibility:hidden;"></a>
                             <a class="icon" href="" target="_blank" data-index="11"><img src="${iDribbble}" style="visibility:hidden;"></a>
                             </div>
                             </div>
